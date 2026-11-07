@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesores de Seguros | Protección Digital y Personalizada</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            800: '#0B192C',
+                            900: '#1E3E62',
+                        },
+                        accent: {
+                            500: '#FF6500',
+                            600: '#E05600',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 flex flex-col min-h-screen selection:bg-accent-500 selection:text-white">
+
+    <!-- NAV BAR -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-navy-900 to-blue-700 flex items-center justify-center shadow-md text-white font-bold text-xl">
+                        <i class="fa-solid me-0.5 fa-shield-halved text-2xl text-accent-500"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold text-navy-800 tracking-tight block leading-none">SEGURA<span class="text-accent-500">&</span>ASOCIADOS</span>
+                        <span class="text-xs text-slate-500 font-medium tracking-wide">Productores Asesores de Seguros</span>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 font-medium text-slate-600 text-sm">
+                    <a href="#cotizador" class="hover:text-accent-500 transition-colors">Cotizar</a>
+                    <a href="#coberturas" class="hover:text-accent-500 transition-colors">Coberturas</a>
+                    <a href="#nosotros" class="hover:text-accent-500 transition-colors">Nosotros</a>
+                    <a href="#faq" class="hover:text-accent-500 transition-colors">Preguntas Frecuentes</a>
+                    <a href="#contacto" class="hover:text-accent-500 transition-colors">Contacto</a>
+                </nav>
+
+                <!-- Phone / CTA Header Button -->
+                <div class="hidden sm:flex items-center gap-4">
+                    <a href="https://wa.me/5492634000000?text=Hola,%20quiero%20hacer%20una%20consulta%20general" target="_blank" class="flex items-center gap-2 bg-emerald-50 text-emerald-700 px-4 py-2 rounded-full font-semibold text-sm border border-emerald-200 hover:bg-emerald-100 transition-all">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Atención Inmediata</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-navy-900 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#cotizador" class="block py-2 text-slate-700 font-medium hover:text-accent-500">Cotizar Online</a>
+            <a href="#coberturas" class="block py-2 text-slate-700 font-medium hover:text-accent-500">Servicios y Coberturas</a>
+            <a href="#nosotros" class="block py-2 text-slate-700 font-medium hover:text-accent-500">Sobre Nosotros</a>
+            <a href="#faq" class="block py-2 text-slate-700 font-medium hover:text-accent-500">Preguntas Frecuentes</a>
+            <a href="#contacto" class="block py-2 text-slate-700 font-medium hover:text-accent-500">Contacto</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-gradient-to-br from-navy-800 via-navy-900 to-slate-900 text-white overflow-hidden py-16 lg:py-24">
+        <!-- Abstract background pattern -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left text column -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 text-accent-500 text-xs font-semibold tracking-wide border border-white/10 uppercase">
+                        <i class="fa-solid fa-location-dot"></i> San Martín, Mendoza & Cobertura Nacional
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Tu tranquilidad y la de tu familia en <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-accent-500">manos expertas</span>
+                    </h1>
+                    <p class="text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Te asesoramos de forma personalizada para encontrar la mejor póliza al precio justo. Tramitamos tus siniestros de manera rápida, transparente y sin complicaciones.
+                    </p>
+                    <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#cotizador" class="bg-accent-500 hover:bg-accent-600 text-white px-8 py-4 rounded-xl font-bold text-center shadow-lg shadow-accent-500/30 transition-all transform hover:-translate-y-0.5">
+                            Cotizar Mi Seguro Ahora
+                        </a>
+                        <a href="#coberturas" class="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-semibold text-center backdrop-blur-md transition-all">
+                            Ver Coberturas
+                        </a>
+                    </div>
+                    <!-- Badges -->
+                    <div class="pt-8 border-t border-white/10 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <p class="text-2xl font-bold text-white">+10</p>
+                            <p class="text-xs text-slate-400">Años de trayectoria</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-white">100%</p>
+                            <p class="text-xs text-slate-400">Gestión Digital & Humana</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-white">24/7</p>
+                            <p class="text-xs text-slate-400">Soporte en Siniestros</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Quick Info Box -->
+                <div class="lg:col-span-5">
+                    <div class="glass-card text-slate-800 p-8 rounded-3xl shadow-2xl border border-white/20 relative">
+                        <div class="absolute -top-3 -right-3 bg-accent-500 text-white font-bold text-xs uppercase px-3 py-1 rounded-full shadow">
+                            Atención Directa
+                        </div>
+                        <h3 class="text-2xl font-bold text-navy-800 mb-2">¿Necesitás asesoramiento ya?</h3>
+                        <p class="text-sm text-slate-600 mb-6">Hablá directamente con nuestros Productores Asesores sin intermedarios.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                                <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-bolt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-sm text-slate-900">Cotización Express</h4>
+                                    <p class="text-xs text-slate-500">Compará distintas compañías en minutos.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                                <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-headset"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-sm text-slate-900">Acompañamiento en Siniestros</h4>
+                                    <p class="text-xs text-slate-500">No estás solo ante un choque o imprevisto.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                                <div class="w-10 h-10 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-file-contract"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-sm text-slate-900">Revisión Gratuita de Pólizas</h4>
+                                    <p class="text-xs text-slate-500">Analizamos tu seguro actual y buscamos mejoras.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/5492634000000?text=Hola,%20quisiera%20recibir%20asesoramiento%20personalizado" target="_blank" class="mt-6 w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-md transition-all">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Enviar WhatsApp Directo
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- COTIZADOR INTERACTIVO POR PASOS -->
+    <section id="cotizador" class="py-16 lg:py-24 bg-slate-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="text-accent-500 font-bold text-sm tracking-wider uppercase">Cotizador Digital</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-800 mt-1">Solicitá tu presupuesto personalizado</h2>
+                <p class="text-slate-600 mt-2">Completá los pasos y te enviaremos las mejores opciones del mercado por WhatsApp.</p>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl border border-slate-200/80 overflow-hidden">
+                <!-- Stepper header -->
+                <div class="bg-slate-50 border-b border-slate-200 p-4 sm:p-6">
+                    <div class="flex items-center justify-between max-w-md mx-auto">
+                        <div class="flex flex-col items-center step-indicator active" data-step="1">
+                            <div class="w-10 h-10 rounded-full bg-accent-500 text-white font-bold flex items-center justify-center text-sm shadow">1</div>
+                            <span class="text-xs font-semibold text-navy-800 mt-1">Tipo</span>
+                        </div>
+                        <div class="h-1 flex-1 bg-slate-200 mx-2 rounded step-line"></div>
+                        <div class="flex flex-col items-center step-indicator" data-step="2">
+                            <div class="w-10 h-10 rounded-full bg-slate-200 text-slate-600 font-bold flex items-center justify-center text-sm">2</div>
+                            <span class="text-xs font-semibold text-slate-500 mt-1">Detalles</span>
+                        </div>
+                        <div class="h-1 flex-1 bg-slate-200 mx-2 rounded step-line"></div>
+                        <div class="flex flex-col items-center step-indicator" data-step="3">
+                            <div class="w-10 h-10 rounded-full bg-slate-200 text-slate-600 font-bold flex items-center justify-center text-sm">3</div>
+                            <span class="text-xs font-semibold text-slate-500 mt-1">Contacto</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Container -->
+                <form id="quote-form" class="p-6 sm:p-10">
+
+                    <!-- STEP 1: Selección de Seguro -->
+                    <div id="step-1" class="step-content">
+                        <h3 class="text-xl font-bold text-navy-800 mb-6 text-center">¿Qué querés asegurar hoy?</h3>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                            
+                            <label class="cursor-pointer">
+                                <input type="radio" name="insurance_type" value="Auto / Moto" class="peer hidden" checked>
+                                <div class="border-2 border-slate-200 peer-checked:border-accent-500 peer-checked:bg-orange-50/50 rounded-2xl p-5 text-center transition-all hover:border-slate-300">
+                                    <i class="fa-solid fa-car text-3xl text-slate-600 peer-checked:text-accent-500 mb-2"></i>
+                                    <h4 class="font-bold text-slate-800 text-sm">Auto / Moto</h4>
+                                </div>
+                            </label>
+
+                            <label class="cursor-pointer">
+                                <input type="radio" name="insurance_type" value="Hogar / Combinado" class="peer hidden">
+                                <div class="border-2 border-slate-200 peer-checked:border-accent-500 peer-checked:bg-orange-50/50 rounded-2xl p-5 text-center transition-all hover:border-slate-300">
+                                    <i class="fa-solid fa-house-chimney text-3xl text-slate-600 peer-checked:text-accent-500 mb-2"></i>
+                                    <h4 class="font-bold text-slate-800 text-sm">Hogar</h4>
+                                </div>
+                            </label>
+
+                            <label class="cursor-pointer">
+                                <input type="radio" name="insurance_type" value="Vida / Accidentes Personal" class="peer hidden">
+                                <div class="border-2 border-slate-200 peer-checked:border-accent-500 peer-checked:bg-orange-50/50 rounded-2xl p-5 text-center transition-all hover:border-slate-300">
+                                    <i class="fa-solid fa-heart-pulse text-3xl text-slate-600 peer-checked:text-accent-500 mb-2"></i>
+                                    <h4 class="font-bold text-slate-800 text-sm">Vida / AP</h4>
+                                </div>
+                            </label>
+
+                            <label class="cursor-pointer">
+                                <input type="radio" name="insurance_type" value="Comercio / PyME" class="peer hidden">
+                                <div class="border-2 border-slate-200 peer-checked:border-accent-500 peer-checked:bg-orange-50/50 rounded-2xl p-5 text-center transition-all hover:border-slate-300">
+                                    <i class="fa-solid fa-store text-3xl text-slate-600 peer-checked:text-accent-500 mb-2"></i>
+                                    <h4 class="font-bold text-slate-800 text-sm">Comercio</h4>
+                                </div>
+                            </label>
+
+                            <label class="cursor-pointer">
+                                <input type="radio" name="insurance_type" value="ART / Riesgos de Trabajo" class="peer hidden">
+                                <div class="border-2 border-slate-200 peer-checked:border-accent-500 peer-checked:bg-orange-50/50 rounded-2xl p-5 text-center transition-all hover:border-slate-300">
+                                    <i class="fa-solid fa-user-gear text-3xl text-slate-600 peer-checked:text-accent-500 mb-2"></i>
+                                    <h4 class="font-bold text-slate-800 text-sm">ART</h4>
+                                </div>
+                            </label>
+
+                            <label class="cursor-pointer">
+                                <input type="radio" name="insurance_type" value="Otro Seguro" class="peer hidden">
+                                <div class="border-2 border-slate-200 peer-checked:border-accent-500 peer-checked:bg-orange-50/50 rounded-2xl p-5 text-center transition-all hover:border-slate-300">
+                                    <i class="fa-solid fa-ellipsis text-3xl text-slate-600 peer-checked:text-accent-500 mb-2"></i>
+                                    <h4 class="font-bold text-slate-800 text-sm">Otro</h4>
+                                </div>
+                            </label>
+
+                        </div>
+                        <div class="mt-8 flex justify-end">
+                            <button type="button" onclick="nextStep(2)" class="bg-navy-800 hover:bg-navy-900 text-white font-bold px-8 py-3 rounded-xl transition-all flex items-center gap-2">
+                                Siguiente <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: Detalles según bien a asegurar -->
+                    <div id="step-2" class="step-content hidden">
+                        <h3 class="text-xl font-bold text-navy-800 mb-6 text-center">Detalles de lo que deseás asegurar</h3>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-1">Marca, Modelo / Descripción del Bien</label>
+                                <input type="text" id="detail_desc" placeholder="Ej: Toyota Hilux 2020 / Casa 3 dormitorios" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-semibold text-slate-700 mb-1">Año / Antigüedad (Si aplica)</label>
+                                    <input type="text" id="detail_year" placeholder="Ej: 2021" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-slate-700 mb-1">Ubicación / Localidad</label>
+                                    <input type="text" id="detail_location" placeholder="Ej: San Martín, Mendoza" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-1">Comentarios o Cobertura deseada</label>
+                                <textarea id="detail_notes" rows="3" placeholder="Ej: Busco cobertura contra Todo Riesgo o Terceros Completo..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 flex justify-between">
+                            <button type="button" onclick="prevStep(1)" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold px-6 py-3 rounded-xl transition-all">
+                                Volver
+                            </button>
+                            <button type="button" onclick="nextStep(3)" class="bg-navy-800 hover:bg-navy-900 text-white font-bold px-8 py-3 rounded-xl transition-all flex items-center gap-2">
+                                Siguiente <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: Datos de Contacto y Envío -->
+                    <div id="step-3" class="step-content hidden">
+                        <h3 class="text-xl font-bold text-navy-800 mb-6 text-center">Tus datos para recibir el presupuesto</h3>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-1">Nombre Completo *</label>
+                                <input type="text" id="user_name" required placeholder="Ej: Juan Pérez" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-semibold text-slate-700 mb-1">Teléfono / WhatsApp *</label>
+                                    <input type="tel" id="user_phone" required placeholder="Ej: 2634123456" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-slate-700 mb-1">Email (Opcional)</label>
+                                    <input type="email" id="user_email" placeholder="ejemplo@email.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Summary box -->
+                        <div class="mt-6 p-4 rounded-xl bg-slate-50 border border-slate-200 text-sm">
+                            <h4 class="font-bold text-navy-800 mb-1">Resumen de tu cotización:</h4>
+                            <p id="summary-text" class="text-slate-600 text-xs">Completa los campos obligatorios para enviar tu solicitud.</p>
+                        </div>
+
+                        <div class="mt-8 flex justify-between">
+                            <button type="button" onclick="prevStep(2)" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold px-6 py-3 rounded-xl transition-all">
+                                Volver
+                            </button>
+                            <button type="button" onclick="sendToWhatsApp()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-3 rounded-xl transition-all flex items-center gap-2 shadow-lg shadow-emerald-600/30">
+                                <i class="fa-brands fa-whatsapp text-xl"></i> Solicitar por WhatsApp
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- COBERTURAS / SERVICIOS -->
+    <section id="coberturas" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-accent-500 font-bold text-sm tracking-wider uppercase">Nuestros Servicios</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-800 mt-1">Soluciones integrales de protección</h2>
+                <p class="text-slate-600 mt-3 text-lg">Trabajamos con las aseguradoras líderes del país para brindarte las mejores condiciones de póliza.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-700 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-car text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-800 mb-3">Seguro Automotor y Moto</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Desde Responsabilidad Civil básica hasta Todo Riesgo con franquicia. Servicio de auxilio mecánico y remolque garantizado.
+                    </p>
+                    <a href="#cotizador" onclick="selectType('Auto / Moto')" class="text-accent-500 font-bold text-sm inline-flex items-center gap-2 hover:gap-3 transition-all">
+                        Cotizar Vehículo <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center text-orange-700 mb-6 group-hover:bg-accent-500 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-house-chimney text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-800 mb-3">Combinado Familiar</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Protegé tu hogar e instalaciones ante incendio, robo de electrodomésticos, daños por agua, cristales y responsabilidad civil.
+                    </p>
+                    <a href="#cotizador" onclick="selectType('Hogar / Combinado')" class="text-accent-500 font-bold text-sm inline-flex items-center gap-2 hover:gap-3 transition-all">
+                        Cotizar Hogar <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-700 mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-heart-pulse text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-800 mb-3">Vida y Accidentes</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Tranquilidad para vos y los tuyos. Coberturas individuales, familiares y colectivas con facilidades de indemnización.
+                    </p>
+                    <a href="#cotizador" onclick="selectType('Vida / Accidentes Personal')" class="text-accent-500 font-bold text-sm inline-flex items-center gap-2 hover:gap-3 transition-all">
+                        Cotizar Seguro de Vida <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center text-purple-700 mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-store text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-800 mb-3">Comercio y PyME</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Protección integral para tu local o empresa: incendio, mercaderías, robo, responsabilidad civil comercial y equipos.
+                    </p>
+                    <a href="#cotizador" onclick="selectType('Comercio / PyME')" class="text-accent-500 font-bold text-sm inline-flex items-center gap-2 hover:gap-3 transition-all">
+                        Cotizar Comercio <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center text-amber-700 mb-6 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-user-gear text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-800 mb-3">ART y Seguros Laborales</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Cumplimiento normativo y resguardo de empleados para pymes, comercios y trabajadores independientes (AP Construcción, etc.).
+                    </p>
+                    <a href="#cotizador" onclick="selectType('ART / Riesgos de Trabajo')" class="text-accent-500 font-bold text-sm inline-flex items-center gap-2 hover:gap-3 transition-all">
+                        Cotizar ART <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="w-14 h-14 bg-teal-100 rounded-2xl flex items-center justify-center text-teal-700 mb-6 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-tractor text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-800 mb-3">Agrícola y Transporte</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Soluciones para el sector productivo de la zona: maquinaria agrícola, granizo, fletes y mercadería en tránsito.
+                    </p>
+                    <a href="#cotizador" onclick="selectType('Otro Seguro')" class="text-accent-500 font-bold text-sm inline-flex items-center gap-2 hover:gap-3 transition-all">
+                        Consultar Especiales <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- POR QUÉ ELEGIRNOS -->
+    <section id="nosotros" class="py-16 lg:py-24 bg-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div>
+                    <span class="text-accent-500 font-bold text-sm tracking-wider uppercase">Atención Familiar y Profesional</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2 mb-6">
+                        Más de 10 años acompañándote con la misma cercanía de siempre
+                    </h2>
+                    <p class="text-slate-300 leading-relaxed mb-6">
+                        Evolucionamos hacia un modelo digital para brindarte respuestas más rápidas y sin que tengas que moverte de tu casa. Mantenemos el compromiso humano de un equipo de Productores Asesores de Seguros dedicados exclusivamente a defender tus intereses ante las aseguradoras.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-accent-500/20 text-accent-500 flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-check text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Asesoramiento Neutral</h4>
+                                <p class="text-slate-400 text-sm">Buscamos la compañía que realmente responda mejor según el tipo de riesgo.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-accent-500/20 text-accent-500 flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-check text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Defensa Activa del Asegurado</h4>
+                                <p class="text-slate-400 text-sm">En caso de siniestro, nosotros realizamos los reclamos y el seguimiento completo.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-accent-500/20 text-accent-500 flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-check text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Gestión 100% Digital</h4>
+                                <p class="text-slate-400 text-sm">Recibí tus pólizas, cupones de pago y certificados de circulación por WhatsApp o Email.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Callout Box -->
+                <div class="bg-gradient-to-br from-navy-800 to-slate-800 p-8 sm:p-10 rounded-3xl border border-white/10 shadow-2xl">
+                    <div class="text-center space-y-4">
+                        <div class="w-16 h-16 bg-accent-500/20 text-accent-500 rounded-2xl flex items-center justify-center mx-auto text-2xl">
+                            <i class="fa-solid fa-handshake-angle"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">¿Ya tenés un seguro y querés comparar costo/cobertura?</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Envianos una foto o PDF de tu póliza actual por WhatsApp y te hacemos una comparativa gratuita sin compromiso.
+                        </p>
+                        <a href="https://wa.me/5492634000000?text=Hola,%20quiero%20enviarles%20mi%20poliza%20actual%20para%20una%20comparativa" target="_blank" class="inline-block w-full bg-accent-500 hover:bg-accent-600 text-white font-bold py-3.5 rounded-xl shadow-lg transition-all">
+                            Enviar Póliza para Revisión
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES (FAQ) -->
+    <section id="faq" class="py-16 lg:py-24 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-accent-500 font-bold text-sm tracking-wider uppercase">Resolvemos tus dudas</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-800 mt-1">Preguntas Frecuentes</h2>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                    <button class="w-full text-left p-5 font-bold text-navy-800 flex justify-between items-center focus:outline-none faq-btn">
+                        <span>¿Por qué contratar mediante un Productor Asesor y no directo con la compañía?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                    </button>
+                    <div class="px-5 pb-5 text-slate-600 text-sm hidden faq-content">
+                        El costo es exactamente el mismo, pero contás con la ventaja de tener un profesional independiente que te asesora objetivamente y gestiona reclamos por vos ante un siniestro. No atendés con un robot ni hacés colas telefónicas.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                    <button class="w-full text-left p-5 font-bold text-navy-800 flex justify-between items-center focus:outline-none faq-btn">
+                        <span>¿Cómo recibo los documentos de mi seguro?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                    </button>
+                    <div class="px-5 pb-5 text-slate-600 text-sm hidden faq-content">
+                        Una vez aprobada la cotización y emitida la póliza, te enviamos el certificado de cobertura y la tarjeta de circulación directamente a tu WhatsApp o correo en formato PDF listos para guardar en tu celular.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                    <button class="w-full text-left p-5 font-bold text-navy-800 flex justify-between items-center focus:outline-none faq-btn">
+                        <span>¿Qué debo hacer en caso de un choque o accidente?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                    </button>
+                    <div class="px-5 pb-5 text-slate-600 text-sm hidden faq-content">
+                        Lo primero es mantener la calma y tomar los datos del tercero (Nombre, DNI, Licencia, Dominio y Aseguradora). Luego nos escribís inmediatamente por WhatsApp y nosotros nos encargamos de realizar el denuncio administrativo en la compañía.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                    <button class="w-full text-left p-5 font-bold text-navy-800 flex justify-between items-center focus:outline-none faq-btn">
+                        <span>¿Cuáles son los medios de pago disponibles?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+                    </button>
+                    <div class="px-5 pb-5 text-slate-600 text-sm hidden faq-content">
+                        Podés abonar mediante Débito Automático (tarjeta de crédito o CBU bancario) con importantes descuentos, o a través de Pago Fácil, RapiPago y Transferencia Bancaria.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO / FOOTER -->
+    <footer id="contacto" class="bg-navy-800 text-slate-300 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                
+                <!-- Col 1: Agency Brand -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-accent-500 flex items-center justify-center text-white font-bold text-lg">
+                            <i class="fa-solid me-0.5 fa-shield-halved"></i>
+                        </div>
+                        <span class="text-xl font-extrabold text-white tracking-tight">SEGURA<span class="text-accent-500">&</span>ASOCIADOS</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Productores Asesores de Seguros matriculados. Asesoramiento profesional y transparente en San Martín, Mendoza y todo el país.
+                    </p>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Enlaces Rápido</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#cotizador" class="hover:text-accent-500 transition-colors">Cotizar Online</a></li>
+                        <li><a href="#coberturas" class="hover:text-accent-500 transition-colors">Seguros de Autos</a></li>
+                        <li><a href="#coberturas" class="hover:text-accent-500 transition-colors">Seguros de Hogar</a></li>
+                        <li><a href="#coberturas" class="hover:text-accent-500 transition-colors">Seguros de Vida / ART</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Contact Info -->
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Contacto Directo</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+                            <span>+54 9 263 400-0000</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-slate-400"></i>
+                            <span>contacto@segurayasociados.com.ar</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-slate-400 mt-1"></i>
+                            <span>San Martín, Mendoza, Argentina</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Horarios -->
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Atención Digital</h4>
+                    <p class="text-xs text-slate-400 mb-2">Lunes a Viernes: 08:30 a 19:30 hs</p>
+                    <p class="text-xs text-slate-400 mb-4">Guardia para siniestros graves: 24/7</p>
+                    <a href="https://wa.me/5492634000000?text=Hola,%20necesito%20hacer%20una%20consulta" target="_blank" class="inline-flex items-center gap-2 text-xs bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg text-white font-semibold transition">
+                        <i class="fa-brands fa-whatsapp text-emerald-400"></i> Escribinos por WhatsApp
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="border-t border-slate-700/60 pt-8 text-center text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p>© <span id="year"></span> Segura & Asociados - Productores Asesores de Seguros. Todos los derechos reservados.</p>
+                <p class="text-slate-400">Matrícula SSN Activa</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/5492634000000?text=Hola,%20vengo%20desde%20la%20pagina%20web%20y%20quisiera%20asesoramiento" target="_blank" aria-label="Contacto por WhatsApp" class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all transform hover:scale-110">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- JAVASCRIPT FOR LOGIC -->
+    <script>
+        // Set dynamic current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ Accordion logic
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                
+                // Toggle current FAQ
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Cotizador Step Logic
+        let currentStep = 1;
+
+        function updateStepUI(step) {
+            // Hide all step contents
+            document.querySelectorAll('.step-content').forEach(el => el.classList.add('hidden'));
+            // Show target step
+            document.getElementById(`step-${step}`).classList.remove('hidden');
+
+            // Update indicators
+            document.querySelectorAll('.step-indicator').forEach(ind => {
+                const indStep = parseInt(ind.getAttribute('data-step'));
+                const circle = ind.querySelector('div');
+                const label = ind.querySelector('span');
+
+                if (indStep === step) {
+                    circle.className = 'w-10 h-10 rounded-full bg-accent-500 text-white font-bold flex items-center justify-center text-sm shadow';
+                    label.className = 'text-xs font-semibold text-navy-800 mt-1';
+                } else if (indStep < step) {
+                    circle.className = 'w-10 h-10 rounded-full bg-emerald-500 text-white font-bold flex items-center justify-center text-sm';
+                    circle.innerHTML = '<i class="fa-solid fa-check"></i>';
+                    label.className = 'text-xs font-semibold text-slate-500 mt-1';
+                } else {
+                    circle.className = 'w-10 h-10 rounded-full bg-slate-200 text-slate-600 font-bold flex items-center justify-center text-sm';
+                    circle.textContent = indStep;
+                    label.className = 'text-xs font-semibold text-slate-500 mt-1';
+                }
+            });
+        }
+
+        function nextStep(targetStep) {
+            if (targetStep === 3) {
+                // Prepare summary
+                const selectedType = document.querySelector('input[name="insurance_type"]:checked').value;
+                const desc = document.getElementById('detail_desc').value || 'No especificado';
+                const year = document.getElementById('detail_year').value || 'N/A';
+                const location = document.getElementById('detail_location').value || 'San Martín';
+                
+                document.getElementById('summary-text').innerHTML = `
+                    <strong>Seguro:</strong> ${selectedType}<br>
+                    <strong>Detalle:</strong> ${desc} (${year}) - <strong>Ubicación:</strong> ${location}
+                `;
+            }
+            currentStep = targetStep;
+            updateStepUI(currentStep);
+        }
+
+        function prevStep(targetStep) {
+            currentStep = targetStep;
+            updateStepUI(currentStep);
+        }
+
+        function selectType(typeName) {
+            const radio = document.querySelector(`input[name="insurance_type"][value="${typeName}"]`);
+            if (radio) {
+                radio.checked = true;
+            }
+            nextStep(2);
+        }
+
+        // WhatsApp Sending Logic
+        function sendToWhatsApp() {
+            const name = document.getElementById('user_name').value.trim();
+            const phone = document.getElementById('user_phone').value.trim();
+            const email = document.getElementById('user_email').value.trim();
+
+            if (!name || !phone) {
+                alert('Por favor completá tu nombre y teléfono de contacto para enviar la solicitud.');
+                return;
+            }
+
+            const type = document.querySelector('input[name="insurance_type"]:checked').value;
+            const desc = document.getElementById('detail_desc').value || 'Sin especificar';
+            const year = document.getElementById('detail_year').value || 'N/A';
+            const location = document.getElementById('detail_location').value || 'No especificada';
+            const notes = document.getElementById('detail_notes').value || 'Sin comentarios adicionales';
+
+            // Construct message
+            let text = `*SOLICITUD DE COTIZACIÓN DESDE LA WEB*\n\n`;
+            text += `👤 *Nombre:* ${name}\n`;
+            text += `📞 *Teléfono:* ${phone}\n`;
+            if (email) text += `📧 *Email:* ${email}\n`;
+            text += `\n🛡️ *Tipo de Seguro:* ${type}\n`;
+            text += `🚗 *Bien/Modelo:* ${desc}\n`;
+            text += `📅 *Año/Antigüedad:* ${year}\n`;
+            text += `📍 *Ubicación:* ${location}\n`;
+            text += `📝 *Notas:* ${notes}\n`;
+
+            const encodedText = encodeURIComponent(text);
+            // Replace with your real agency WhatsApp number
+            const whatsappUrl = `https://wa.me/5492634000000?text=${encodedText}`;
+            
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
